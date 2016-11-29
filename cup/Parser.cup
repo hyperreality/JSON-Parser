@@ -1,0 +1,37 @@
+package jsonparser;
+
+import java_cup.runtime.*;
+
+parser code {:
+    public static void main(String args[]) {
+        try {
+            SymbolFactory sf = new DefaultSymbolFactory();
+            if (args.length==0) new Parser(new Scanner(System.in,sf),sf).parse();
+            else {
+                new Parser(new Scanner(new java.io.FileInputStream(args[0]),sf),sf).parse();
+                System.out.println("This is a valid JSON file");
+            }
+        } catch (Exception e) { 
+            System.exit(1); // Send error exit code to calling program
+        }
+    }
+:}
+
+terminal COMMA, COLON, LSQBRACKET, RSQBRACKET, LBRACE, RBRACE, STRING, NUMBER, TRUE, FALSE, NULL;
+
+non terminal object, key_value_list, key_value, array, value_list, value;
+
+// According to the ECMA-404 specification a top level JSON non-terminal may consist of any JSON value
+// http://stackoverflow.com/questions/18419428/what-is-the-minimum-valid-json
+value ::= STRING | NUMBER | object | array | TRUE | FALSE | NULL;
+
+// Objects and arrays are either empty or filled with keys/values and values respectively
+object ::= LBRACE RBRACE | LBRACE key_value_list RBRACE;
+array ::= LSQBRACKET RSQBRACKET | LSQBRACKET value_list RSQBRACKET;
+
+// Object keys must be strings
+key_value ::= STRING COLON value;
+
+// Build nested constructs
+key_value_list ::= key_value_list COMMA key_value | key_value;
+value_list ::= value_list COMMA value | value;

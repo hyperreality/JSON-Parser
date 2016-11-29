@@ -1,0 +1,49 @@
+The following files should pass JSON testing:
+
+[✓] testfiles/shouldpass/array.json passed as expected
+[✓] testfiles/shouldpass/emptystring.json passed as expected
+[✓] testfiles/shouldpass/encoding.json passed as expected
+[✓] testfiles/shouldpass/object.json passed as expected
+[✓] testfiles/shouldpass/pass1.json passed as expected
+[✓] testfiles/shouldpass/pass2.json passed as expected
+[✓] testfiles/shouldpass/pass3.json passed as expected
+
+The following files are not valid JSON:
+
+[✓] testfiles/shouldfail/alarm_character.json failed as expected
+[✓] testfiles/shouldfail/control_character.json failed as expected
+[✓] testfiles/shouldfail/fail10.json failed as expected
+[✓] testfiles/shouldfail/fail11.json failed as expected
+[✓] testfiles/shouldfail/fail12.json failed as expected
+[✓] testfiles/shouldfail/fail13.json failed as expected
+[✓] testfiles/shouldfail/fail14.json failed as expected
+[✓] testfiles/shouldfail/fail15.json failed as expected
+[✓] testfiles/shouldfail/fail16.json failed as expected
+[✓] testfiles/shouldfail/fail17.json failed as expected
+[✓] testfiles/shouldfail/fail19.json failed as expected
+[✓] testfiles/shouldfail/fail20.json failed as expected
+[✓] testfiles/shouldfail/fail21.json failed as expected
+[✓] testfiles/shouldfail/fail22.json failed as expected
+[✓] testfiles/shouldfail/fail23.json failed as expected
+[✓] testfiles/shouldfail/fail24.json failed as expected
+[✓] testfiles/shouldfail/fail25.json failed as expected
+[✓] testfiles/shouldfail/fail26.json failed as expected
+[✓] testfiles/shouldfail/fail27.json failed as expected
+[✓] testfiles/shouldfail/fail28.json failed as expected
+[✓] testfiles/shouldfail/fail29.json failed as expected
+[✓] testfiles/shouldfail/fail2.json failed as expected
+[✓] testfiles/shouldfail/fail30.json failed as expected
+[✓] testfiles/shouldfail/fail31.json failed as expected
+[✓] testfiles/shouldfail/fail32.json failed as expected
+[✓] testfiles/shouldfail/fail33.json failed as expected
+[✓] testfiles/shouldfail/fail3.json failed as expected
+[✓] testfiles/shouldfail/fail4.json failed as expected
+[✓] testfiles/shouldfail/fail5.json failed as expected
+[✓] testfiles/shouldfail/fail6.json failed as expected
+[✓] testfiles/shouldfail/fail7.json failed as expected
+[✓] testfiles/shouldfail/fail8.json failed as expected
+[✓] testfiles/shouldfail/fail9.json failed as expected
+[✓] testfiles/shouldfail/invalid_number.json failed as expected
+[✓] testfiles/shouldfail/no_closing_brace.json failed as expected
+
+42 of 42 tests passed
