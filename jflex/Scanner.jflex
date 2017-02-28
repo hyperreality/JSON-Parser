@@ -6,6 +6,8 @@ import java.lang.Exception;
 %%
 %cup
 %unicode // Required to detect locale-specific characters like pound and euro signs
+%line
+%column
 %class Scanner
 %{
     public Scanner(java.io.InputStream r, SymbolFactory sf){
@@ -98,4 +100,4 @@ whitespace = [ \t\r\n\f]
 {whitespace} { /* ignore white space. */ }
 
 // Pass error to CUP on encountering illegal characters, triggering failure exit code
-. { throw new Error("Illegal Symbol"); }
+. { throw new Error("Illegal character: " + yytext() + " at line " + (yyline + 1) + ", column " + (yycolumn + 1)); }
