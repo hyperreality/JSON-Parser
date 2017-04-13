@@ -30,7 +30,6 @@ First I read through the JSON specification and translated all of the individual
 
 By combining these shorter rules into larger expressions, constructing correct rules for detecting character and number tokens - as well as other terminals in the JSON format - is straightforward. These terminals are then output to the CUP parser, whose configuration file defines non-terminals to allow nesting of data constructs. 
 
-Note that in the old RFC-4627 JSON specification [the outermost construct could only be an object or an array](http://stackoverflow.com/questions/18419428/what-is-the-minimum-valid-json
-value), whereas in later specifications any value is allowed.
+Note that in the old RFC-4627 JSON specification [the outermost construct could only be an object or an array](http://stackoverflow.com/questions/18419428/what-is-the-minimum-valid-json), whereas in later specifications any value is allowed.
 
 Further documentation can be found in the Scanner.jflex and Parser.cup files.
